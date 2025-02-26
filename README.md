@@ -1,6 +1,6 @@
 # EX01 Developing a Simple Webserver
 
-# Date:
+# Date:26.02.2025
 # AIM:
 To develop a simple webserver to serve html pages and display the configuration details of laptop.
 
@@ -21,9 +21,9 @@ Serving the HTML pages.
 Testing the webserver.
 
 # PROGRAM:
+```
 import http.server
 import socketserver
-
 PORT = 8000
 
 class MyHandler(http.server.SimpleHTTPRequestHandler):
@@ -36,6 +36,8 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
 with socketserver.TCPServer(("", PORT), MyHandler) as httpd:
     print(f"Serving at port {PORT}")
     httpd.serve_forever()
+
+```
 
 # OUTPUT:
 ![alt text](<Screenshot 2025-02-26 162647.png>)
